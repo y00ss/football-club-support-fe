@@ -25,7 +25,7 @@ function TableUsers() {
 
         navigate("/tifoso", {
             state: {
-               fan
+                fan
             }
         });
 

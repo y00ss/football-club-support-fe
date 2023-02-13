@@ -5,18 +5,18 @@ import NavBarDf from "../components/Navs/NavBarDf";
 import Button from "react-bootstrap/Button";
 
 
-function Home(){
+function Home() {
 
 
-    return(
+    return (
         <>
             <NavBarDf/>
-            <Container >
+            <Container>
                 <h3> Lista tifosi </h3>
 
                 <TableUsers/>
 
-                <Button href={"/registration"} variant="primary" type="submit" className="float-left" >
+                <Button href={"/registration"} variant="primary" type="submit" className="float-left">
                     Inserisci nuovo tifoso
                 </Button>
             </Container>
@@ -24,6 +24,7 @@ function Home(){
         </>
     )
 }
+
 //import './App.css';
 
 export default Home;

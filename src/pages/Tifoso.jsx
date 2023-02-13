@@ -19,7 +19,7 @@ function Tifoso() {
     console.log(user)
     const deleteUser = async () => {
         // iter fans
-        const res = await axios.post("/user/delete?id_user=" + user.id + "&id_team=" + user.team) ;
+        const res = await axios.post("/user/delete?id_user=" + user.id + "&id_team=" + user.team);
         console.log(res);
 
         if (res) {

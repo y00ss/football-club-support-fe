@@ -28,7 +28,7 @@ function UserForm() {
     }, [])
 
     const fetchTeams = async () => {
-        const res = await  axios.get("/team");
+        const res = await axios.get("/team");
         console.log(res);
         setTeams(res.data);
     }
@@ -50,10 +50,10 @@ function UserForm() {
         console.log(userFan.birth);
 
         const res = await axios.post("/user", userFan);
-        if (res){
+        if (res) {
             toast.success("Tifoso salvato con successo")
             navigate("/");
-        }else {
+        } else {
             toast.error("Operazione fallita")
         }
 
@@ -70,7 +70,8 @@ function UserForm() {
 
                 <Form.Group as={Col} controlId="formGridSurname">
                     <Form.Label>Cognome</Form.Label>
-                    <Form.Control name="surname" type="text" placeholder="Rossi" onChange={handleChangeUserFan} required/>
+                    <Form.Control name="surname" type="text" placeholder="Rossi" onChange={handleChangeUserFan}
+                                  required/>
                 </Form.Group>
             </Row>
 
@@ -81,13 +82,13 @@ function UserForm() {
 
             <Form.Group className="mb-3" controlId="formGridYear">
                 <Form.Label>Anno di nascita</Form.Label>
-                <Form.Control name="birth" type="date" time onChange={handleChangeUserFan} required />
+                <Form.Control name="birth" type="date" time onChange={handleChangeUserFan} required/>
             </Form.Group>
 
             <Row className="mb-2">
                 <Form.Group as={Col} controlId="formGridFan">
                     <Form.Label>Tifoso</Form.Label>
-                    <Form.Select name="teamId"  onChange={handleChangeUserFan} required>
+                    <Form.Select name="teamId" onChange={handleChangeUserFan} required>
                         <option>-</option>
 
                         {teams && teams.map(team => {
@@ -109,7 +110,7 @@ function UserForm() {
 
             </Row>
 
-{/*
+            {/*
             <Form.Group className="mb-3" id="formGridCheckboxPrivacy">
                 <Form.Check type="checkbox" label="Accetta condizioni privacy"/>
             </Form.Group>

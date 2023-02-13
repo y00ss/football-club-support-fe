@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import 'react-toastify/dist/ReactToastify.css'
 import Home from "./pages/Home";
@@ -13,7 +13,7 @@ function App() {
     return (
         <>
             <Routes>
-                <Route path="/" element={<Home />}/>
+                <Route path="/" element={<Home/>}/>
                 <Route path="/registration" element={<Registration/>}/>
                 <Route path="/tifoso" element={<Tifoso/>}/>
             </Routes>

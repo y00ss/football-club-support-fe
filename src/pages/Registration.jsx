@@ -7,7 +7,7 @@ function Registration() {
 
     return (
         <>
-        <NavBarDf/>
+            <NavBarDf/>
             <Container>
                 <h3> Registrazione nuovo tifoso</h3>
             </Container>
