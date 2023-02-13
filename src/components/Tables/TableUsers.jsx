@@ -43,7 +43,7 @@ function TableUsers() {
             <tbody>
             {fans && fans.map((fan, index) => {
                 return (
-                    <tr key={index} onClick={() => {
+                    <tr key={index}  onClick={() => {
                         userDetails(fan, index)
                     }}>
                         {/*

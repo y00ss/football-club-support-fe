@@ -88,7 +88,7 @@ function UserForm() {
             <Row className="mb-2">
                 <Form.Group as={Col} controlId="formGridFan">
                     <Form.Label>Tifoso</Form.Label>
-                    <Form.Select name="teamId" onChange={handleChangeUserFan} required>
+                    <Form.Select name="teamId" required={true} as={"select"} type="select" onChange={handleChangeUserFan} >
                         <option>-</option>
 
                         {teams && teams.map(team => {
@@ -100,10 +100,10 @@ function UserForm() {
                 </Form.Group>
                 <Form.Group as={Col} controlId="formGridPlus">
                     <Form.Label>Abbonato</Form.Label>
-                    <Form.Select defaultValue="-">
+                    <Form.Select name="subscriber" defaultValue="-" required={true}>
                         <option>-</option>
-                        <option>Si</option>
-                        <option>No</option>
+                        <option value={true}>Si</option>
+                        <option value={false}>No</option>
                     </Form.Select>
                 </Form.Group>
 
